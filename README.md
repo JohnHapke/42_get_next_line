@@ -6,7 +6,7 @@
 ## Explanation of Behavior
 The get_next_line function is designed to read a single line at a time from a specified file descriptor `fd`. Each call to the function retrieves the next line from the file or input stream, returning it as a dynamically allocated string without the trailing newline character `\n`.
 
-If the end of the file is reached or an error occurs, the function returns NULL. To handle lines that span multiple reads, the function uses a static variable to retain any leftover characters from the previous call, ensuring seamless continuation.
+If the end of the file is reached or an error occurs, the function returns `NULL`. To handle lines that span multiple reads, the function uses a static variable to retain any leftover characters from the previous call, ensuring seamless continuation.
 
 ## Buffer Size
 The buffer size determines how many bytes are read at a time from the file descriptor. By default, the buffer size is set to 42. However, you can customize it by defining your own buffer size during compilation. Use the `-D BUFFER_SIZE=n flag` (where n is your desired size) when compiling the function. 
